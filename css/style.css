@@ -37,6 +37,9 @@ body{
     font-size: 16px;
 }
 .btn{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
     background-color: #A42A15;
     padding: 15px;
     border-radius: 15px;
@@ -55,7 +58,7 @@ body{
     border-radius: 15px;
     bottom: -5px;
     left: 0;
-    background-color: #ECF0F1;
+    background-color: #b30a07;
     transition: transform 0.3s ease-out;
     transform: scaleX(0);
 }
@@ -76,11 +79,69 @@ body{
 }
 /* header part end   */
 
+
+/* football-matches main start  */
+.football-matches{
+    display: flex;
+    width: 90%;
+    margin: 2rem auto;
+}
+.matches-info{
+    width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    padding: 10px;
+    background-color: #523D1F;
+    border-radius: 10px;
+}
+.matches-info button{
+    cursor: pointer;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0 0 10px #333
+}
+#blog{
+    background-color: #b30a07;
+}
+.matches{
+    width: 80%;
+   display: grid;
+   grid-template-columns: repeat(3,1fr); 
+   grid-gap: 25px;
+
+}
+span{
+    margin: 0 10px;
+}
+.match{
+    padding: 10px;
+    background-color: #F2F3ED;
+    border-radius: 10px;
+}
+.match img{
+    width: 100%;
+}
+.match button{
+    padding: 3px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.match > p{
+    font-weight: 500;
+    color: #111;
+}
+/* football-matches main end    */
 /* media query start  */
 
 /* for mobile  */
 @media screen and (max-width: 767px){
-
+/* header part  */
     .banner-container{
         flex-direction: column;
         align-items: center;
@@ -99,17 +160,66 @@ body{
     .btn{
         margin: 10px;
     }
-
+/* main part football matches  */
+.football-matches{
+    flex-direction: column;
+    align-items: center;
 }
-/* for tablet  */
+.matches-info{
+    background-color: #fff;
+    margin: 0;
+}
+.matches-info buttton{
+    background-color: antiquewhite;
+}
+.matches{
+    grid-template-columns: repeat(1,1fr);
+}
+.football-matches{
+    display: none;
+}
+}
+
+
+/* for tab  */
 @media screen and (max-width: 1023px) and (min-width: 768px){
 
 .banner-title {
         font-size: 1.5rem;
     }
+ /* main part football matches  */
+ .football-matches{
+    flex-direction: column;
+    text-align: center;
+ }
+ .matches-info{
+    width: 100%;
+    height: 110px;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fff;
+ }
+ .matches{
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.matches-info button{
+    background-color: antiquewhite;
+    height: 55px;
+    width: 190px;
+}
+.item7,.item8,.item9{
+    display: none;
+}
+.football-matches{
+    display: block;
+}
 }
 /* for desktop  */
 @media screen and (min-width: 1024px){
-
+    .football-matches .btn{
+        display: none;
+    }
 }
 /* media query end    */
