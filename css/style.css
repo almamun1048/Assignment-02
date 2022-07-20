@@ -282,7 +282,40 @@ upcomming page style start
 }
 
 /* ========================== 
-upcomming page style start
+upcomming page style end
+============================== */
+
+
+/* ========================== 
+animation start
+============================== */
+.banner-right img{
+    position: relative;
+    animation: run 5s infinite;
+}
+
+@keyframes run {
+    0% {
+        top:0;
+        left: 0;
+    }
+    50% {
+      left:30%;
+      top: 10%;
+    }
+    75%{
+        right:20%;
+        bottom: 20%;
+    }
+    100%{
+        top:0;
+        left: 0;
+    }
+  }
+
+
+/* ========================== 
+animation end
 ============================== */
 
 
